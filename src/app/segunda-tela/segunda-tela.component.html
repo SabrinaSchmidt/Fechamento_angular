@@ -1,135 +1,145 @@
-<script>
-
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-  }
-
-</script>
-
-
-
 <div class="container">
-  <div class="row d-flex align-items-center ">
-    <div class="col-md-4 mt-lg-5">
-      <div class="imagem text-center d-flex justify-content-end">
-        <!--<img src="/src/res/user.png" alt="Imagem" width=190 height=190>-->
-        <i class="fa fa-user fa-5x"></i>
-      </div>
-    </div>
-    <div class="col-md-4 mt-lg-5">
-      <h4 class="display-6">Guilherme Ezequiel da Silva </h4><br>
-      <h5 class="display-10">Desenvolvedor</h5>
-    </div>
-    <div class="col-md-4 seta mt-lg-5">
-      <div class="d-flex justify-content-end align-items-start ">
-        <a onclick="history.go(-1);">
-          <i class="fa iconeSeta fa-arrow-left fa-2x"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!--Certo-->
-  <div class="container">
-    <div class="container mt-lg-4">
-      <button class=" collapsible">Março</button>
-      <div class="content">
-        <div id="tabela">
-          <table class="alinhamentoTabela">
-            <tbody>
-              <thead>
-                <div id="cabecalho">
-                  <tr>
-                    <th>Descrição</th>
-                    <th>Referência</th>
-                    <th>Descontos</th>
-                    <th>Proventos</th>
-                  </tr>
-                  </div>
-              </thead>
-
-              <tr>
-                <th>Horas Trabalhadas</th>
-                <th>220</th>
-                <th></th>
-                <th id="proventos">R$ 2.570,00</th>
-              </tr>
-
-              <tr>
-                <th>Horas Extras</th>
-                <th>30</th>
-                <th></th>
-                <th id="proventos">R$ 300,00</th>
-              </tr>
-
-              <tr>
-                <th>Bonificação</th>
-                <th></th>
-                <th></th>
-                <th id="proventos">R$ 1.000,00</th>
-              </tr>
-
-              <tr>
-                <th>Plr</th>
-                <th></th>
-                <th></th>
-                <th id="proventos">R$ 500,00</th>
-              </tr>
-
-              <tr>
-                <th>Plano de Saude</th>
-                <th></th>
-                <th id="descontos">(R$24,00)</th>
-                <th></th>
-              </tr>
-
-              <tr>
-                <th>Vale Transporte</th>
-                <th></th>
-                <th id="descontos">(R$ 154,00)</th>
-                <th></th>
-              </tr>
-
-              <tr>
-                <th>FGTS</th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-
-              <tr>
-                <th>INSS</th>
-                <th></th>
-                <th id="descontos">(R$ 176,00)</th>
-                <th></th>
-              </tr>
-
-              <tr>
-                <th>Total</th>
-                <th></th>
-                <th id="descontos">(R$ 354,00)</th>
-                <th id="proventos">R$ 3.470,00</th>
-              </tr>
-
-              <tr>
-                <th>Valor líquido a receber</th>
-                <th></th>
-                <th></th>
-                <th id="proventos">R$ 3.116,00</th>
-              </tr>
-            </tbody>
-          </table>
+    <div class="row d-flex align-items-center ">
+        <div class="col-md-4 mt-lg-5">
+            <div class="imagem text-center d-flex justify-content-end">
+                <!--<img src="/src/res/user.png" alt="Imagem" width=190 height=190>-->
+                <i class="fa fa-user fa-5x"></i>
+            </div>
         </div>
-      </div>
+        <div class="col-md-4 mt-lg-5">
+            <h4 class="display-6">Guilherme Ezequiel da Silva </h4><br>
+            <h5 class="display-10">Desenvolvedor</h5>
+        </div>
+        <div class="col-md-4 seta mt-lg-5">
+            <div class="d-flex justify-content-end align-items-start ">
+                <a onclick="history.go(-1);">
+                    <i class="fa iconeSeta fa-arrow-left fa-2x"></i>
+                </a>
+            </div>
+        </div>
     </div>
+
+    <!--Certo-->
+    <div class="container">
+        <div class="container mt-lg-4">
+            <button id="Demo" class="collapsible">Março</button>
+            <div class="content">
+                <div id="tabela">
+                    <table class="alinhamentoTabela">
+                        <tbody>
+                            <thead>
+                                <div id="cabecalho">
+                                    <tr>
+                                        <th>Descrição</th>
+                                        <th>Referência</th>
+                                        <th>Descontos</th>
+                                        <th>Proventos</th>
+                                    </tr>
+                                </div>
+                            </thead>
+
+                            <tr>
+                                <th>Horas Trabalhadas</th>
+                                <th>220</th>
+                                <th></th>
+                                <th id="proventos">R$ 2.570,00</th>
+                            </tr>
+
+                            <tr>
+                                <th>Horas Extras</th>
+                                <th>30</th>
+                                <th></th>
+                                <th id="proventos">R$ 300,00</th>
+                            </tr>
+
+                            <tr>
+                                <th>Bonificação</th>
+                                <th></th>
+                                <th></th>
+                                <th id="proventos">R$ 1.000,00</th>
+                            </tr>
+
+                            <tr>
+                                <th>Plr</th>
+                                <th></th>
+                                <th></th>
+                                <th id="proventos">R$ 500,00</th>
+                            </tr>
+
+                            <tr>
+                                <th>Plano de Saude</th>
+                                <th></th>
+                                <th id="descontos">(R$24,00)</th>
+                                <th></th>
+                            </tr>
+
+                            <tr>
+                                <th>Vale Transporte</th>
+                                <th></th>
+                                <th id="descontos">(R$ 154,00)</th>
+                                <th></th>
+                            </tr>
+
+                            <tr>
+                                <th>FGTS</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+
+                            <tr>
+                                <th>INSS</th>
+                                <th></th>
+                                <th id="descontos">(R$ 176,00)</th>
+                                <th></th>
+                            </tr>
+
+                            <tr>
+                                <th>Total</th>
+                                <th></th>
+                                <th id="descontos">(R$ 354,00)</th>
+                                <th id="proventos">R$ 3.470,00</th>
+                            </tr>
+
+                            <tr>
+                                <th>Valor líquido a receber</th>
+                                <th></th>
+                                <th></th>
+                                <th id="proventos">R$ 3.116,00</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <th>Valor Horas Trabalhadas</th>
+                    <th>valorHorasExtras</th>
+                    <th>valorInss</th>
+                    <th>valorImpostoDeRenda</th>
+                    <th>valorPlanoSaude</th>
+                    <th>valorValeTransporte</th>
+                    <th>salarioBruto</th>
+                    <th>salarioLiquido</th>
+                    <th>valorFGTS</th>
+                    <th>bonificacaoColaborador</th>
+                    <th>plr</th>
+                </tr>
+                <tr *ngFor="let folha of folhas">
+                    <td>{{folha.valorHorasTrabalhadas}}</td>
+                    <td>{{folha.valorHorasExtras}}</td>
+                    <td>{{folha.valorInss}}</td>
+                    <td>{{folha.valorImpostoDeRenda}}</td>
+                    <td>{{folha.valorPlanoSaude}}</td>
+                    <td>{{folha.valorValeTransporte}}</td>
+                    <td>{{folha.salarioBruto}}</td>
+                    <td>{{folha.salarioLiquido}}</td>
+                    <td>{{folha.valorFGTS}}</td>
+                    <td>{{folha.bonificacaoColaborador}}</td>
+                    <td>{{folha.plr}}</td>
+                </tr>
+            </table>
+        </div>

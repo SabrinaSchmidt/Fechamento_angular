@@ -1,73 +1,72 @@
-
 <div class="container">
-  <div class="col sidebar-container">
-    <div class="text-center sidebar-logo ">
-      <i class="fa fa-address-card fa-lg"></i>
+    <div class="col sidebar-container">
+        <div class="text-center sidebar-logo ">
+            <i class="fa fa-address-card fa-lg"></i>
+        </div>
+        <ul class="sidebar-navigation mt-lg-1">
+            <li class="mt-lg-2">
+                <a routerLink="">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-address-book"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-edit"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-archive"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-at"></i>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/telaErro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
     </div>
-    <ul class="sidebar-navigation mt-lg-1">
-      <li class="mt-lg-2">
-        <a routerLink="">
-          <i class="fa fa-home fa-lg" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-tachometer" aria-hidden="true"></i>
-        </a>
-      </li>
 
-      <li>
-        <a href="#">
-          <i class="fa fa-address-book"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-edit"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-users" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-archive"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-envelope"></i>
-        </a>
-      </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navnav">
+        <div class="container-md">
+            <a class="navbar-brand" href="#">Menu</a>
+        </div>
+    </nav>
 
-      <li>
-        <a href="#">
-          <i class="fa fa-cog" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-at"></i>
-        </a>
-      </li>
-      <li>
-        <a  routerLink="/telaErro">
-          <i class="fa fa-info-circle" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+    <router-outlet></router-outlet>
+    <footer>
 
-   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light navnav">
-    <div class="container-md">
-      <a class="navbar-brand" href="#">Menu</a>
-    </div>
-  </nav>
-
-  <router-outlet></router-outlet>
-  <footer>
-
-  </footer>
+    </footer>
