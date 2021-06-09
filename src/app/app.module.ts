@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SegundaTelaComponent } from './segunda-tela/segunda-tela.component';
+import { PrimeiraTelaComponent } from './primeira-tela/primeira-tela.component';
+import { TelaErroComponent } from './tela-erro/tela-erro.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SegundaTelaComponent
+    SegundaTelaComponent,
+    PrimeiraTelaComponent,
+    TelaErroComponent
   ],
   imports: [
     BrowserModule,

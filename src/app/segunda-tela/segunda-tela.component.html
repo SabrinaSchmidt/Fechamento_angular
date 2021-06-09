@@ -1,275 +1,135 @@
-<style>
-    @media (max-width: 768px) {
-      .sidebar-container {
-        display: none;
-      }
-  
-      .seta {
-        display: none;
-      }
-  
-      .imagem {
-        justify-content: center !important;
-      }
-    }
-  
-    @media (min-width: 768px) {
-      .navnav {
-        display: none;
-      }
-    }
-  
-    .sidebar-container {
-      position: fixed;
-      width: 8%;
-      height: 100%;
-      left: 0;
-      overflow-x: hidden;
-      overflow-y: auto;
-      background: #454545;
-      color: #fff;
-    }
-  
-    a {
-      color: #454545;
-    }
-  
-    a:hover {
-      color: #00C89D;
-    }
-  
-    .content-container {
-      padding-top: 20px;
-    }
-  
-    .sidebar-logo {
-      font-size: 2rem;
-    }
-  
-    .sidebar-navigation {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      position: relative;
-    }
-  
-    .sidebar-navigation li {
-      background-color: transparent;
-      position: relative;
-      width: 100%;
-    }
-  
-    .sidebar-navigation li a {
-      padding: 10px 15px 10px 30px;
-      display: block;
-      color: #fff;
-      text-decoration: none;
-    }
-  
-    .sidebar-navigation li .fa {
-      margin-right: 10px;
-    }
-  
-    .sidebar-navigation li a:active,
-    .sidebar-navigation li a:hover,
-    .sidebar-navigation li a:focus {
-      text-decoration: none;
-      outline: none;
-    }
-  
-    .sidebar-navigation li:hover::before {
-      width: 100%;
-    }
-  
-    .sidebar-navigation .header {
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-  
-    .sidebar-navigation .header::before {
-      background-color: transparent;
-    }
-  
-    .content-container {
-      padding-left: 220px;
-    }
-  
-    .collapsible {
-      background-color: #454545;
-      color: white;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-    }
-  
-    .active,
-    .collapsible:hover {
-      background-color: #00C89D;
-    }
-  
-    .collapsible:after {
-      content: '\002B';
-      color: white;
-      font-weight: bold;
-      float: right;
-      margin-left: 5px;
-    }
-  
-    .active:after {
-      content: "\2212";
-    }
-  
-    .content {
-      padding: 0 18px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      background-color: #f1f1f1;
-    }
-  
-    .p1 {
-      color: rgb(56, 107, 5);
-    }
-  
-    P2 {
-      color: rgb(172, 4, 37);
-    }
-  
-    #tabela {
-      height: auto;
-      border: 1px solid #000;
-      float: center;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  
-    table {
-      width: 100%;
-      text-align: left;
-    }
-  
-    #descontos {
-      color: red;
-    }
-  
-    #proventos {
-      color: #28B463;
-    }
-  
-    .perfil {
-      position: relative;
-      left: 170px;
-    }
-  
-    .voltar {
-      position: relative;
-      top: -60px;
-      width: 0%;
-      height: 50%;
-    }
-  
-    body {
-      background-color: #e7e8ea;
-    }
-  
-    .btn {
-      background-color: #00C89D;
-    }
-  
-    .btn:hover {
-      color: white;
-    }
-  
-    .icone {
-      width: 130px;
-    }
-  </style>
-  
-  
-  <div class="container">
-    <div class="col sidebar-container">
-      <div class="text-center sidebar-logo ">
-        <i class="fa fa-address-card fa-lg"></i>
-      </div>
-      <ul class="sidebar-navigation mt-lg-1">
-        <li class="mt-lg-2">
-          <a href="index.html">
-            <i class="fa fa-home fa-lg" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-tachometer" aria-hidden="true"></i>
-          </a>
-        </li>
-  
-        <li>
-          <a href="#">
-            <i class="fa fa-address-book"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-edit"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-users" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-archive"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-envelope"></i>
-          </a>
-        </li>
-  
-        <li>
-          <a href="#">
-            <i class="fa fa-cog" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-at"></i>
-          </a>
-        </li>
-        <li>
-          <a href="pagina_erro_1.html">
-            <i class="fa fa-info-circle" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  
-  
-    <section class="align-items-center justify-content-center">
-      <main>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navnav">
-          <div class="container-md">
-            <a class="navbar-brand" href="#">Menu</a>
-          </div>
-        </nav>
-  
-  
-     
+<script>
 
-  
-      </main>
-    </section>
-    <footer>
-  
-    </footer>
-  
-  
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+
+</script>
+
+
+
+<div class="container">
+  <div class="row d-flex align-items-center ">
+    <div class="col-md-4 mt-lg-5">
+      <div class="imagem text-center d-flex justify-content-end">
+        <!--<img src="/src/res/user.png" alt="Imagem" width=190 height=190>-->
+        <i class="fa fa-user fa-5x"></i>
+      </div>
+    </div>
+    <div class="col-md-4 mt-lg-5">
+      <h4 class="display-6">Guilherme Ezequiel da Silva </h4><br>
+      <h5 class="display-10">Desenvolvedor</h5>
+    </div>
+    <div class="col-md-4 seta mt-lg-5">
+      <div class="d-flex justify-content-end align-items-start ">
+        <a onclick="history.go(-1);">
+          <i class="fa iconeSeta fa-arrow-left fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!--Certo-->
+  <div class="container">
+    <div class="container mt-lg-4">
+      <button class=" collapsible">Março</button>
+      <div class="content">
+        <div id="tabela">
+          <table class="alinhamentoTabela">
+            <tbody>
+              <thead>
+                <div id="cabecalho">
+                  <tr>
+                    <th>Descrição</th>
+                    <th>Referência</th>
+                    <th>Descontos</th>
+                    <th>Proventos</th>
+                  </tr>
+                  </div>
+              </thead>
+
+              <tr>
+                <th>Horas Trabalhadas</th>
+                <th>220</th>
+                <th></th>
+                <th id="proventos">R$ 2.570,00</th>
+              </tr>
+
+              <tr>
+                <th>Horas Extras</th>
+                <th>30</th>
+                <th></th>
+                <th id="proventos">R$ 300,00</th>
+              </tr>
+
+              <tr>
+                <th>Bonificação</th>
+                <th></th>
+                <th></th>
+                <th id="proventos">R$ 1.000,00</th>
+              </tr>
+
+              <tr>
+                <th>Plr</th>
+                <th></th>
+                <th></th>
+                <th id="proventos">R$ 500,00</th>
+              </tr>
+
+              <tr>
+                <th>Plano de Saude</th>
+                <th></th>
+                <th id="descontos">(R$24,00)</th>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>Vale Transporte</th>
+                <th></th>
+                <th id="descontos">(R$ 154,00)</th>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>FGTS</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>INSS</th>
+                <th></th>
+                <th id="descontos">(R$ 176,00)</th>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>Total</th>
+                <th></th>
+                <th id="descontos">(R$ 354,00)</th>
+                <th id="proventos">R$ 3.470,00</th>
+              </tr>
+
+              <tr>
+                <th>Valor líquido a receber</th>
+                <th></th>
+                <th></th>
+                <th id="proventos">R$ 3.116,00</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
