@@ -10,7 +10,7 @@ import { Folha } from './folha';
 })
 export class FolhaService {
 
-  url = 'http://localhost:9091/folha'; // api rest fake
+  url = 'http://localhost:4600/folha'; // api rest fake
 
   // injetando o HttpClient
   constructor(private httpClient: HttpClient) { }

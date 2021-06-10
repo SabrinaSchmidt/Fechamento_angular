@@ -8,7 +8,7 @@ import { Folha } from '../folha'
   styleUrls: ['./segunda-tela.component.css']
 })
 export class SegundaTelaComponent implements OnInit {
-
+  public isCollapsed = false;
   folhas: Folha[] = [];
   
 

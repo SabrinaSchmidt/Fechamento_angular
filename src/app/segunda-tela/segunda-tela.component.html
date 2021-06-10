@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row d-flex align-items-center ">
         <div class="col-md-4 mt-lg-5">
@@ -20,66 +21,13 @@
     </div>
     <div class="container">
         <div class="container mt-lg-4">
-            <button id="Demo" class="collapsible btn  btn-lg">Março</button>
+            <button id="Demo" class="collapsible btn  btn-lg" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">Março</button>
         </div>
 
-        <!--Certo
-            <button id="Demo" class="collapsible">Março</button>
-            <div class="content">
-                <div id="tabela">
-                    <table class="alinhamentoTabela">
-                        <tbody>
-                            <thead>
-                                <div id="cabecalho">
-                                    <tr>
-                                        <th>Descrição</th>
-                                        <th>Referência</th>
-                                        <th>Descontos</th>
-                                        <th>Proventos</th>
-                                    </tr>
-                                </div>
-                            </thead>
+       
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <table>
-                <tr>
-                    <th>Valor Horas Trabalhadas</th>
-                    <th>valorHorasExtras</th>
-                    <th>valorInss</th>
-                    <th>valorImpostoDeRenda</th>
-                    <th>valorPlanoSaude</th>
-                    <th>valorValeTransporte</th>
-                    <th>salarioBruto</th>
-                    <th>salarioLiquido</th>
-                    <th>valorFGTS</th>
-                    <th>bonificacaoColaborador</th>
-                    <th>plr</th>
-                </tr>
-                <tr *ngFor="let folha of folhas">
-                    <td>{{folha.valorHorasTrabalhadas}}</td>
-                    <td>{{folha.valorHorasExtras}}</td>
-                    <td>{{folha.valorInss}}</td>
-                    <td>{{folha.valorImpostoDeRenda}}</td>
-                    <td>{{folha.valorPlanoSaude}}</td>
-                    <td>{{folha.valorValeTransporte}}</td>
-                    <td>{{folha.salarioBruto}}</td>
-                    <td>{{folha.salarioLiquido}}</td>
-                    <td>{{folha.valorFGTS}}</td>
-                    <td>{{folha.bonificacaoColaborador}}</td>
-                    <td>{{folha.plr}}</td>
-
-                </tr>
-            </table>
-        ,</div>-->
-
-        <div class="container">
-            <table class="table table-borderless table-dark">
+        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="container">
+            <table class="table table-borderless table-dark" *ngFor="let folha of folhas">
 
                 <thead>
                     <tr>
@@ -90,7 +38,7 @@
                     </tr>
                 </thead>
 
-                <tbody *ngFor="let folha of folhas">
+                <tbody >
                     <tr>
                         <th scope="row">Horas Trabalhadas</th>
                         <td></td>
