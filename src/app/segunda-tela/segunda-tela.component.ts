@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FolhaService} from '../folha.service'
-import {Folha} from '../folha'
+import { FolhaService } from '../folha.service'
+import { Folha } from '../folha'
 
 @Component({
   selector: 'app-segunda-tela',
@@ -10,18 +10,27 @@ import {Folha} from '../folha'
 export class SegundaTelaComponent implements OnInit {
 
   folhas: Folha[] = [];
+  
 
-  constructor(private folhaService:FolhaService) {
+  constructor(private folhaService: FolhaService) {
 
-   }
-
-  ngOnInit(): void {
-    this.getAll();    
   }
 
- getAll(){
-   this.folhaService.getAll().subscribe(folha => this.folhas = folha);
- }
-  
+  ngOnInit(): void {
+    this.getAll();
+  }
+
+  getAll() {
+    this.folhaService.getAll().subscribe(folha => this.folhas = folha);
+  }
+
+  totalDeDescontos(): any {
+    let descontos;
+   
+      const element = this.folhas[this.getAll.length];
+     return descontos = element.salarioBruto - element.salarioLiquido;
+
+  }
+
 
 }

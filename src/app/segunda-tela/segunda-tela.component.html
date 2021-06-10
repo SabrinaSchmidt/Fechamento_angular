@@ -18,10 +18,12 @@
             </div>
         </div>
     </div>
-
-    <!--Certo-->
     <div class="container">
         <div class="container mt-lg-4">
+            <button id="Demo" class="collapsible btn  btn-lg">Março</button>
+        </div>
+
+        <!--Certo
             <button id="Demo" class="collapsible">Março</button>
             <div class="content">
                 <div id="tabela">
@@ -38,75 +40,6 @@
                                 </div>
                             </thead>
 
-                            <tr>
-                                <th>Horas Trabalhadas</th>
-                                <th>220</th>
-                                <th></th>
-                                <th id="proventos">R$ 2.570,00</th>
-                            </tr>
-
-                            <tr>
-                                <th>Horas Extras</th>
-                                <th>30</th>
-                                <th></th>
-                                <th id="proventos">R$ 300,00</th>
-                            </tr>
-
-                            <tr>
-                                <th>Bonificação</th>
-                                <th></th>
-                                <th></th>
-                                <th id="proventos">R$ 1.000,00</th>
-                            </tr>
-
-                            <tr>
-                                <th>Plr</th>
-                                <th></th>
-                                <th></th>
-                                <th id="proventos">R$ 500,00</th>
-                            </tr>
-
-                            <tr>
-                                <th>Plano de Saude</th>
-                                <th></th>
-                                <th id="descontos">(R$24,00)</th>
-                                <th></th>
-                            </tr>
-
-                            <tr>
-                                <th>Vale Transporte</th>
-                                <th></th>
-                                <th id="descontos">(R$ 154,00)</th>
-                                <th></th>
-                            </tr>
-
-                            <tr>
-                                <th>FGTS</th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-
-                            <tr>
-                                <th>INSS</th>
-                                <th></th>
-                                <th id="descontos">(R$ 176,00)</th>
-                                <th></th>
-                            </tr>
-
-                            <tr>
-                                <th>Total</th>
-                                <th></th>
-                                <th id="descontos">(R$ 354,00)</th>
-                                <th id="proventos">R$ 3.470,00</th>
-                            </tr>
-
-                            <tr>
-                                <th>Valor líquido a receber</th>
-                                <th></th>
-                                <th></th>
-                                <th id="proventos">R$ 3.116,00</th>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -140,6 +73,90 @@
                     <td>{{folha.valorFGTS}}</td>
                     <td>{{folha.bonificacaoColaborador}}</td>
                     <td>{{folha.plr}}</td>
+
                 </tr>
+            </table>
+        ,</div>-->
+
+        <div class="container">
+            <table class="table table-borderless table-dark">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Referência</th>
+                        <th scope="col">Descontos</th>
+                        <th scope="col">Proventos</th>
+                    </tr>
+                </thead>
+
+                <tbody *ngFor="let folha of folhas">
+                    <tr>
+                        <th scope="row">Horas Trabalhadas</th>
+                        <td></td>
+                        <td></td>
+                        <td id="proventos">R$ {{folha.valorHorasTrabalhadas | number: '1.0-2'}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Horas Extras</th>
+                        <td></td>
+                        <td></td>
+                        <td id="proventos">R$ {{folha.valorHorasExtras | number: '1.0-2'}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bonificação</th>
+                        <td></td>
+                        <td></td>
+                        <td id="proventos">R$ {{folha.bonificacaoColaborador | number: '1.0-2'}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Plr</th>
+                        <td></td>
+                        <td></td>
+                        <td id="proventos">R$ {{folha.plr | number: '1.0-2'}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Plano de Saude</th>
+                        <td></td>
+                        <td id="descontos">R$ {{folha.valorPlanoSaude | number: '1.0-2'}}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Vale Transporte</th>
+                        <td></td>
+                        <td id="descontos">R$ {{folha.valorValeTransporte | number: '1.0-2'}}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">FGTS</th>
+                        <td></td>
+                        <td id="descontos">R$ {{folha.valorFGTS | number: '1.0-2'}}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">INSS</th>
+                        <td></td>
+                        <td id="descontos">R$ {{folha.valorInss | number: '1.0-2'}}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td></td>
+                        <td id="descontos" ng-model='val | number: 2'>R$ {{folha.salarioBruto-folha.salarioLiquido | number: '1.0-2'}}</td>
+                        <td id="proventos">R$ {{folha.salarioBruto | number: '1.0-2'}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Total líquido a receber</th>
+                        <td></td>
+                        <td id="descontos"></td>
+                        <td id="proventos">R$ {{folha.salarioLiquido | number: '1.0-2'}}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>

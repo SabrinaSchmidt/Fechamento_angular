@@ -27,6 +27,10 @@ export class FolhaService {
         catchError(this.handleError))
   }
 
+  somaDeDescontos(): any {
+    return this.httpClient.get<Folha[]>(this.url)
+    }
+
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
